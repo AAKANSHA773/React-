@@ -1,0 +1,29 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "this is React Project",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AAKANSHA773/React-.git"
+  },
+  "author": "Aakansha Panwar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AAKANSHA773/React-/issues"
+  },
+  "homepage": "https://github.com/AAKANSHA773/React-#readme",
+  "keywords": [],
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
