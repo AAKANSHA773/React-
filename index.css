@@ -39,3 +39,7 @@
   gap: 5px;
   
 }
+.filter-btn{
+  cursor: pointer;
+  margin: 10px;
+}
