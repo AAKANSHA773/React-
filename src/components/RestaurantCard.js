@@ -1,6 +1,6 @@
 
 import { IMG_URL } from "../utils/constants";
-import { resObj } from "../utils/mockData";
+
 
 const RestaurantCard = (props) => {
   const { resData } = props;
