@@ -4,6 +4,8 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [oldRestaurantcard, setNewRestaurant] = useState([]);
+  const [filterRestaurents,setFilterRestaurent] = useState([])
+  const [searchres, setSearchres] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -18,13 +20,35 @@ const Body = () => {
       json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || [];
     setNewRestaurant(restaurants);
+    setFilterRestaurent(restaurants)
   };
- 
 
   return oldRestaurantcard.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
+      <div className="search-Text">
+        <input
+          type="text"
+          className="input-box"
+          value={searchres}
+          onChange={(e) => {
+            setSearchres(e.target.value);
+          }}
+        />
+        <button
+          className="search-btn"
+          onClick={() => {
+            const filteredres = oldRestaurantcard.filter((res) =>
+              res.info.name.toLowerCase().includes(searchres.toLowerCase())
+            );
+            setFilterRestaurent(filteredres);
+          
+          }}
+        >
+          Search
+        </button>
+      </div>
       <div className="filter">
         <button
           className="filter-btn"
@@ -41,7 +65,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {oldRestaurantcard.map((i) => (
+        {filterRestaurents.map((i) => (
           <RestaurantCard key={i?.info?.id} resData={i} />
         ))}
       </div>
