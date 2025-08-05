@@ -27,6 +27,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
+      <div className="search-container">
       <div className="search-Text">
         <input
           type="text"
@@ -55,15 +56,15 @@ const Body = () => {
           onClick={() => {
             console.log(oldRestaurantcard);
             const filterRes = oldRestaurantcard.filter(
-              (res) => res.info.avgRating > 4.3
+              (res) => res?.info.avgRating >=4.2
             );
             console.log(filterRes);
-            setNewRestaurant(filterRes);
+            setFilterRestaurent(filterRes);
           }}
         >
           Top Rated Restauratent{" "}
         </button>
-      </div>
+      </div></div>
       <div className="res-container">
         {filterRestaurents.map((i) => (
           <RestaurantCard key={i?.info?.id} resData={i} />

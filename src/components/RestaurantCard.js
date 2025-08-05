@@ -4,7 +4,7 @@ import { IMG_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
-  const { name, cuisines, avgRating, costForTwo } = resData?.info;
+  const { name, cuisines, avgRating, costForTwo ,sla} = resData?.info;
   return (
     <div className="res-card">
       <img
@@ -16,7 +16,8 @@ const RestaurantCard = (props) => {
       <h5> {cuisines.join(", ")}</h5>
       <h5> {avgRating} star</h5>
       <h5> {costForTwo} </h5>
+       <h5> {sla?.slaString} </h5>
     </div>
   );
 };
-export default RestaurantCard
+export default RestaurantCard;
