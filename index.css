@@ -67,3 +67,8 @@
 .search-Text{
   margin: 10px;
 }
+
+.user-about{
+  border: 1px solid black ;
+  padding-left: 12px;
+}
