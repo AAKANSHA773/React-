@@ -6,18 +6,18 @@ import { Link } from "react-router";
 const Header = () => {
   const [headerBtn, newHeaderBtn]=useState('Login')
   return (
-    <div className="header">
-      <img
-        className="logo"
+    <div className="flex justify-between bg-emerald-100 m-2 shadow-fuchsia-950">
+     <div><img
+        className="w-24"
         src={LOGO_URL}
-      />
-      <div className="nav-items">
-        <ul>
-          <li><Link to="/"> Home </Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to ="/contect">Contect Us</Link></li>
-          <li>cart</li>
-          <button className="header-btn" onClick={() =>{
+      /></div>
+      <div className="nav-bar items-center">
+        <ul className="flex p-4 m-2">
+          <li className="pr-4"><Link to="/"> Home </Link></li>
+          <li className="pr-4"> <Link to="/about">About Us</Link></li>
+          <li className="pr-4"><Link to ="/contect">Contect Us</Link></li>
+          <li className="pr-4"> Cart</li>
+          <button className="header-btn " onClick={() =>{
            if (headerBtn==="Login" ? newHeaderBtn("Logout") :newHeaderBtn("Login"));
           }}
           >{headerBtn}</button>
