@@ -6,7 +6,7 @@ import { Link } from "react-router";
 const Header = () => {
   const [headerBtn, newHeaderBtn]=useState('Login')
   return (
-    <div className="flex justify-between bg-emerald-100 m-2 shadow-fuchsia-950">
+    <div className="flex justify-between bg-emerald-100  shadow-fuchsia-950">
      <div><img
         className="w-24"
         src={LOGO_URL}

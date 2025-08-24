@@ -1,6 +1,6 @@
 const Contect = ()=>{
 return (
-    <div>
+    <div className="min-h-screen bg-orange-100">
         <h2>
             Contect US
         </h2>

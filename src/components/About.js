@@ -14,7 +14,7 @@ class About extends Component {
 render() {
        console.log("Parent render")
 return(
-    <div>
+    <div className="">
         <h1>About Us</h1>
         <UserClass name="Aakansha"/>
     </div>
