@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
 
   if (resInfo === null) return <Shimmer />;
 
-  const { name, cuisines, costForTwoMessage } =
+  const { name,id, cuisines, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info;
 
   const { itemCards } =
@@ -30,7 +30,7 @@ const RestaurantMenu = () => {
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
 
-      {categories.map((category)=><RestaurantCategory key={name} data={category?.card?.card}/>)}
+      {categories.map((category)=><RestaurantCategory key ={category?.card?.card?.categoryId} data={category?.card?.card}/>)}
     </div>
   );
 };
